@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.nc
+*.so
+*.o
+*.log
+verification/
+*.pdf
