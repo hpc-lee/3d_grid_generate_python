@@ -1037,16 +1037,6 @@ Additional parameter:
     \item \texttt{varnm}: Quality variable name (\texttt{orth\_xiet}, \texttt{orth\_xizt}, \texttt{orth\_etzt}, \texttt{jacobi}, \texttt{step\_xi}, \texttt{step\_et}, \texttt{step\_zt}, \texttt{smooth\_xi}, \texttt{smooth\_et}, \texttt{smooth\_zt}, \texttt{ratio})
 \end{itemize}
 
-\subsection{Verification}
-
-Verification scripts compare Python+C output against the original C code:
-\begin{lstlisting}[language=bash]
-cd docs
-bash run_verify_all.sh         # All methods
-python verify_merge.py          # Merge only
-python quick_verify.py          # Quick check
-\end{lstlisting}
-
 %=============================================================================
 \appendix
 \chapter{File Formats}

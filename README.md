@@ -52,12 +52,8 @@ Python (control + I/O + MPI) + C (compute kernels via ctypes)
 │   ├── quality.c/.h         #   Includes cal_ratio_c (aspect ratio)
 │   ├── lib_math.c/.h
 │   └── build.sh
-└── docs/                    # Documentation + verification
-    ├── user_manual.pdf/tex  #   Full user manual
-    ├── compare_verify.py    #   C vs Python+C comparison
-    ├── verify_merge.py      #   Merge verification
-    ├── quick_verify.py      #   Quick precision check
-    └── run_verify_all.sh    #   One-click verification
+└── docs/                    # Documentation
+    └── user_manual.pdf/tex  #   Full user manual
 ```
 
 ## Installation
@@ -174,23 +170,6 @@ Key parameters in each script:
 - `subs/subc/subt`: Start index / count / stride for x, y, z (`subc[n]=1` selects a plane)
 - `flag_km`: Convert coordinates to km (0/1)
 - `varnm` (quality only): Quality variable name (e.g. `orth_xiet`, `step_zt`, `ratio`)
-
-## Verification
-
-```bash
-cd docs
-
-# Run all verification tests (parabolic, hyperbolic, elliptic)
-bash run_verify_all.sh
-
-# Run merge verification only
-python verify_merge.py
-
-# Quick precision check
-python quick_verify.py
-```
-
-Verification compares Python+C output against the original C code output, reporting coordinate precision and quality metric agreement.
 
 ## License
 
